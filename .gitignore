@@ -1,4 +1,4 @@
 .log
 .env
 *.exe
-.vscode
+.vscode/
