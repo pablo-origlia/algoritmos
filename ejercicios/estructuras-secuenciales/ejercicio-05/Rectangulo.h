@@ -11,16 +11,16 @@ public:
     // Constructor
     Rectangulo(float b, float a);
     // Set base
-    void Rectangulo::setBase(float b);
+    void setBase(float b);
     // Get base
-    float Rectangulo::getBase();
+    float getBase();
     // Set altura
-    void Rectangulo::setAltura(float a);
+    void setAltura(float a);
     // Get altura
-    float Rectangulo::getAltura();
+    float getAltura();
     // Superficie del rectángulo
-    float Rectangulo::superficie();
+    float superficie();
     // Perímetro del rectángulo
-    float Rectangulo::perimetro();
+    float perimetro();
 };
 #endif

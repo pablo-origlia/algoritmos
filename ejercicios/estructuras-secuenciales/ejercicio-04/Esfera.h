@@ -1,7 +1,7 @@
 // Header archivo Esfera.h
 #ifndef ESFERA_H
 #define ESFERA_H
- 
+
 class Esfera {
 private:
     float radio;
