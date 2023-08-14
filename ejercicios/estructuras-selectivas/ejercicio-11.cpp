@@ -6,17 +6,11 @@
 
 using namespace std;
 
-int length(char *array) {
-     return sizeof(array)/sizeof(array[0]);
-}
-
-bool esOpcionValida(char op, char *opciones) {
+bool esOpcionValida(char op, char *opciones,int length) {
     int result = -1;
-
-    for(int i = 0; i < length(opciones); i++)
-    {
-        if(opciones[i] == op)
-        {
+    
+    for(int i = 0; i < length; i++) {
+        if(op == opciones[i]) {
             result = i;
             break;
         }
@@ -26,13 +20,13 @@ bool esOpcionValida(char op, char *opciones) {
 
 int main()
 {
-    char operador = ' ';
+    char operador;
     char operadores[] = {'+','-','*','/'};
 
-    cout << "Seleccione una opción que puede ser +: suma, –: resta, *: multiplicación o /: división.";
+    cout << "Seleccione una opción que puede ser\n+: suma\n–: resta\n*: multiplicación\n/: división." << endl;
     cin >> operador;
  
-    cout << "La opción " << operador << (esOpcionValida(operador,operadores)? " es correcta." : " no es correcta.") << endl;
+    cout << "La opción " << operador << (esOpcionValida(operador,operadores,4)? " es correcta." : " no es correcta.") << endl;
 
     return 0;
 }

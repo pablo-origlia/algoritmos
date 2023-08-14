@@ -38,7 +38,7 @@ int main()
     cout << "Ingrese otro número entero: ";
     cin >> numeroN;
 
-    cout << "Seleccione una opción que puede ser +: suma, –: resta, *: multiplicación o /: división.";
+    cout << "Seleccione una opción que puede ser\n+: suma\n–: resta\n*: multiplicación\n/: división." << endl;
     cin >> operador;
  
     cout << "El resultado es " << calcular(numeroM, numeroN, operador) << endl;

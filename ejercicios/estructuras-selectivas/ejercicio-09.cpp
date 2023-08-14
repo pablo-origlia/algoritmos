@@ -12,7 +12,7 @@ bool esDivisible(int a, int b) {
         while (a > 0) {
             a = a - b;
         }
-	return (a == 0);
+	    return (a == 0);
     }
     return false;
 }

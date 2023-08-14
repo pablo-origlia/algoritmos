@@ -28,9 +28,9 @@ string toDhms(int segundos)
 
 int main()
 {
-    int segundos = 92;
+    int segundos;
 
-    cout << "Ingrese un periodo en segundos";
+    cout << "Ingrese un periodo en segundos: ";
     cin >> segundos;
  
     cout << "Es equivalente a " << toDhms(segundos) << endl;
