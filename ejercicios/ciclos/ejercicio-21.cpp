@@ -2,14 +2,6 @@
  * 21. Escribir un algoritmo que lea una serie de números reales y verifique 
  *     si están ordenados en forma ascendente, descendente o si no están 
  *     ordenados, informando por pantalla.
- * 
- * 22. La relación entre temperaturas Celsius y Fahrenheit está dada por: 
- *     C = 5/9 * (F – 32). Escribir un algoritmo que haga una tabla de valores 
- *     Celsius-Fahrenheit, para valores entre OºF y 200ºF, a intervalos de 10º.
- * 
- * 23. Leer N y luego N lotes de números reales que terminan con un valor 0, 
- *     y calcular la media individual de cada lote, junto con la media total de 
- *     todos los números ingresados.
  */
 #include <iostream>
 
