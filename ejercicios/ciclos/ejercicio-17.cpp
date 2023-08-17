@@ -11,41 +11,53 @@ int main()
     int numero;
     int maxN;
     int minN;
-    int pos;
+    string cadena = "";
     int maxPos;
     int minPos;
     bool loop = true;
-    char tecla;
 
-    cout << "Ingrese un numero entero: ";
-    cin >> numero;
+    cout << "Ingrese un numero entero, o una letra para terminar: " << endl;
+    cin >> cadena;
 
-    maxN = minN = numero;
-    maxPos = maxPos = pos = 1;
-
-    while (loop) { 
-        if(maxN < numero) {
-            maxN = numero;
-            maxPos = pos;
-        }
-        if(minN > numero) {
-            minN = numero;
-            minPos = pos;
-        }
-
-        cout << "Desea ingresar otro numero? (S/N)" << endl;
-        cin >> tecla;
-
-        if(tecla == 'N' || tecla == 'n') {
-            loop = false;
-        } else {
-            cin >> numero;
-            pos++;
-        }           
+    if (!isdigit(cadena[0])) {
+        loop = false;
+    } else {
+        numero = stoi(cadena);
+        maxN = numero;
+        minN = numero;
+        maxPos = 1;
+        minPos = 1;
     }
 
-    cout << "El maximo numero " << maxN << " en la posicion " << maxPos << endl;
-    cout << "El minimo numero " << minN << " en la posicion " << minPos << endl;
+    while (loop) { 
+        cout << "Ingrese un numero entero, o una letra para terminar: " << endl;
+        cin >> cadena;
 
+        if (!isdigit(cadena[0])) {
+            loop = false;
+        } else {
+            numero = stoi(cadena);
+
+            if(maxN == numero) {
+                maxPos++;
+            }
+            if(minN == numero) {
+                minPos++;
+            }
+            if(maxN < numero) {
+                maxN = numero;
+                maxPos = 1;
+            }
+            if(minN > numero) {
+                minN = numero;
+                minPos = 1;
+            }
+            
+        }
+    }
+
+    cout << "El maximo numero " << maxN << " y aparecio " << maxPos << endl;
+    cout << "El minimo numero " << minN << " y aparecio " << minPos << endl;
+ 
     return 0;
 }
