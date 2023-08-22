@@ -9,7 +9,7 @@
 
 using namespace std;
   
-bool tieneRaicesReales(float a, float, b, float c) {
+bool tieneRaicesReales(float a, float b, float c) {
 	return (pow(b,2)-(4*a*c) >= 0);
 }
 
