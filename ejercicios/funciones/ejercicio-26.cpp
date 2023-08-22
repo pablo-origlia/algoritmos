@@ -35,8 +35,8 @@ Respuesta raicesSegundoGrado(float a, float b, float c) {
 	if (rta.tieneRaicesReales)
 	{
 		delta = pow(b,2)-(4*a*c);
-		rta.x1 = (((-1) * b) + delta) / (2*a);
-		rta.x2 = (((-1) * b) - delta) / (2*a);
+		rta.x1 = (((-1) * b) + sqrt(delta)) / (2*a);
+		rta.x2 = (((-1) * b) - sqrt(delta)) / (2*a);
 	} else {
 		rta.x1 = 0;
 		rta.x2 = 0;
