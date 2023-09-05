@@ -1,36 +1,54 @@
-/*
- * 32. Se carga un vector X de N elementos enteros. Escribir un algoritmo que 
- *     devuelva un vector que tenga todos los elementos de X, pero sin 
- *     elementos repetidos.
- */
-
 #include <iostream>
+
 using namespace std;
 
-struct Set {
-  int *numeros;
-  int cantidad;
-};
+int convertirEnSet(int *vector, int tamanio, int *conjunto) {
 
-void convertirEnSet(int *numeros, int cantidad, Set *rta) {
+  int ocurrencias;
+  int cursor = 0;
+  int elemento;
+   
+  for (int i = 0; i < tamanio; i++) {
   
-  for (int i=0; i<cantidad; i++) {
-    for (int j=0; j<) {
+    elemento = *(vector+i);
+    ocurrencias = 0;
+
+    for (int j = i; j < tamanio; j++) {
+      if (elemento == *(vector+j)) {
+        ocurrencias++;
+      }
     }
+    if (ocurrencias == 1) {
+      conjunto[cursor] = elemento;
+      cursor++;
+    }
+    
   }
+    
+  return cursor;
 }
 
 int main() {
-  int *numeros;
-  int cantidad;
+  int vector[] = {1,1,2,3,3,2,5,4,5,1};
+  int size = sizeof(vector)/sizeof(vector[0]);
+  int conjunto[size];
+  int cursor = 0;
+ 
+  cursor = convertirEnSet(vector, size, conjunto);
 
-  cout << "Cuantos elementos tiene el vector?" << endl;
-  cin >> cantidad;
+  cout << "== Vector ==" << endl;
 
-  numeros = new int[cantidad];
-  cargarVector(numeros, cantidad);
+  for (int i = 0; i < size; i++) {
+    cout << vector[i] << endl;
+  }
 
-  convertirEnSet(numeros, cantidad);
+  cout << "== Set ==" << endl;
+  
+  for (int i = 0; i < cursor; i++) {
+    cout << conjunto[i] << endl;
+  }
+
+  cout << "== Tamanio: "<< cursor <<" ==" << endl;
+  
   return 0;
 }
-
